@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class CommentBox extends Component {
   state = { comment: '' };
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({ comment: event.target.value})
   };
 
