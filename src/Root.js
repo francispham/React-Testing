@@ -12,7 +12,7 @@ export default ({ children, initialState = {} }) => {
   );
 
   return (
-    <Provider store={createStore(reducers, initialState)}>
+    <Provider store={store}>
       {children}
     </Provider>
   );
