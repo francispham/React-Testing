@@ -22,7 +22,8 @@ export default (ChildComponent) => {
     }
 
     render() {
-      return <ChildComponent />;
+      // {...this.props} is required to pass all props from parents to children
+      return <ChildComponent {...this.props} />;
     }
   }
 
