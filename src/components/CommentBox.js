@@ -5,6 +5,7 @@ import * as actions from 'actions';
 class CommentBox extends Component {
   state = { comment: '' };
 
+/* Are moved to requireAuth-the HOC
   // Lifecycle Methods (to handle component just got rendered and updated):
   // Our component just got rendered
   componentDidMount() {
@@ -22,6 +23,7 @@ class CommentBox extends Component {
       this.props.history.push('/');
     }
   }
+*/
 
   handleChange = event => {
     this.setState({ comment: event.target.value})
@@ -53,8 +55,13 @@ class CommentBox extends Component {
   }
 }
 
+/* Are moved to requireAuth-the HOC
 function mapStateToProps(state) {
   return { auth: state.auth };
 }
 
 export default connect(mapStateToProps, actions)(CommentBox);
+*/
+
+// After mapStateToProps is moved to requireAuth:
+export default connect(null, actions)(CommentBox);
