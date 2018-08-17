@@ -10,6 +10,7 @@ export default function({ dispatch }) {
 
 // Refactor the above(WOW!!!):
 export default ({ dispatch }) => next =>action => {
+  // debugger;
   // Check to see if the action has a promise on its 'payload' property.
 
   // If it doesn't, then send the action on to the next middleware.
